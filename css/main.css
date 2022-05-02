@@ -1,0 +1,252 @@
+/*
+------------------------------
+this is the css to set up the defaults for the project like media breakpoints, colors, etc
+------------------------------
+*/
+/*
+------------------------------
+this is the css for the navbar and the footer
+------------------------------
+*/
+body {
+  width:100%
+}
+
+.centered {
+  display: table;
+  margin: 20px auto;
+}
+
+.graph {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.measure-group {
+  display:inline;
+}
+
+button {
+  margin:0 auto;
+  display:block;
+}
+
+svg {
+  background-color: white;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: left;
+  color: white;
+  white-space: normal;
+  padding: 6px;
+  font-size: 14px;
+  background: rgb(96,125,139);
+  border: 1px solid rgb(96,125,139);
+  border-radius: 2px;
+  pointer-events: none;
+  cursor: none;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: rgb(96,125,139);
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+/*
+------------------------------
+this is the combined css. import all the files and set some higher level settings
+------------------------------
+*/
+html {
+  width: 100%;
+}
+
+body {
+  margin: 0 auto;
+  background-color: #E4E2E1;
+  color: #333;
+}
+
+body p {
+  font-size: 14px;
+}
+
+.key {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .key {
+    width: 100%;
+  }
+}
+
+.key_block {
+  display: flex;
+}
+
+.key_block span {
+  display: none;
+}
+
+.visibleText {
+  display: inline !important;
+}
+
+.key_break {
+  height: 20px;
+  width: 40px;
+  margin: 2px 2px;
+}
+/*# sourceMappingURL=main.css.map */
+
+path {
+  fill:   #c4c4c4;
+  transition: fill 0.2s ease-out;
+}
+.noData{
+  fill:   #c4c4c4;
+}
+.over10{
+  fill:   #38AB8E;
+}
+
+.over5{
+  fill:   #CCCB6C;
+}
+
+.over1{
+  fill:   #F2CF6F;
+}
+
+.under1{
+  fill:   #FD7061;
+}
+.highlighted {
+  stroke-width: 2px;
+  stroke: white;
+  opacity: .5;
+}
+
+#text_container.highlighted {
+  opacity: 1;
+}
+
+#text_container {
+  max-width: 500px;
+  min-height: 40px;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  color: #000;
+  font-weight: 400;
+}
+
+.uit-map-container {
+  position: relative;
+  margin-top: 30px;
+}
+
+.subhead_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 740px) {
+  .subhead_content {
+    flex-direction: column;
+  }
+}
+
+.countryLookup {
+  background-color: #efefef;
+  box-shadow: 3px 3px 0px #000;
+  padding: 8px;
+  border: 1px solid #333;
+  width: 280px;
+}
+
+.buttonsContainer button {
+  border-radius: 100px;
+  padding: 6px 4px;
+  margin: 4px 2px;
+  border: 1px solid #333;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.buttonsContainer .active {
+  background-color: #c70000;
+  color: white;
+}
+
+.sequenceRate .noData{
+  fill:   #c4c4c4;
+}
+.sequenceRate .over10{
+  fill:   #38AB8E;
+}
+
+.sequenceRate .over5{
+  fill:   #CCCB6C;
+}
+
+.sequenceRate .over1{
+  fill:   #F2CF6F;
+}
+
+.sequenceRate .under1{
+  fill:   #FD7061;
+}
+
+.covidCases .noData{
+  fill:   #c4c4c4;
+}
+.covidCases .over10{
+  fill:   #ab0613;
+}
+
+.covidCases .over5{
+  fill:   #c70000;
+}
+
+.covidCases .over1{
+  fill:   #ff4e36;
+}
+
+.covidCases .under1{
+  fill:   #ffbac8;
+}
+
+.genomeNumbers .noData{
+  fill:   #c4c4c4;
+}
+.genomeNumbers .over10{
+  fill:   #005689;
+}
+
+.genomeNumbers .over5{
+  fill:   #0084c6;
+}
+
+.genomeNumbers .over1{
+  fill:   #00b2ff;
+}
+
+.genomeNumbers .under1{
+  fill:   #90dcff;
+}
