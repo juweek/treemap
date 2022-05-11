@@ -60,6 +60,14 @@ div.tooltip {
   font: 10px sans-serif;
 }
 
+section {
+  position: relative;
+}
+
+section > div {
+  position: absolute;
+  top: 0;
+}
 /*
 ------------------------------
 this is the combined css. import all the files and set some higher level settings
