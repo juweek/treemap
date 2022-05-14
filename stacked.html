@@ -7,24 +7,33 @@
   </head>
 
   <body style="margin-top: 20px">
-    <section>
-    <div>
+
+    <div class="buttonsContainer">
+      <button class="active" data-filter="groundBeef">Ground Beef</button>
+      <button data-filter="chicken" class="">Chicken</button>
+      <button data-filter="pork" class="">Pork</button>
+      <button data-filter="duck" class="">Duck</button>
+      </div>
+
+
+    <section id="treeMapContainer">
+    <div data-chart="chicken" class="active">
       <h2>Chicken</h2>
       <div id="svgChicken" class="graph centered"></div>
     </div>
-    <div>
+    <div data-chart="turkey">
       <h2>Turkey</h2>
       <div id="svgTurkey" class="graph centered"></div>
     </div>
-    <div>
+    <div data-chart="groundBeef">
       <h2>Ground Beef</h2>
       <div id="svgGroundBeef" class="graph centered"></div>
     </div>
-    <div>
+    <div data-chart="pork">
       <h2>Pork</h2>
       <div id="svgPork" class="graph centered"></div>
     </div>
-    <div>
+    <div data-chart="duck">
       <h2>Duck</h2>
       <div id="svgDuck" class="graph centered"></div>
     </div>
@@ -37,3 +46,5 @@
     <script src="js/stacked.js"></script>
   </body>
 </html>
+
+

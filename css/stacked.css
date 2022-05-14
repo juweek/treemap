@@ -64,6 +64,19 @@ section > div {
   position: absolute;
   top: 0;
 }
+
+.active{
+  background-color: #c70000;
+}
+
+#treeMapContainer > div {
+  opacity: 0;
+}
+
+#treeMapContainer > div.active {
+  opacity: 1;
+  background-color: transparent;
+}
 /*
 ------------------------------
 this is the combined css. import all the files and set some higher level settings

@@ -22,11 +22,7 @@ let svg = d3.select("#svganchor")
   .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
 
-/*
-------------------------------
-METHOD: load in and process data
-------------------------------
-*/
+
 // Read data
 d3.csv('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_hierarchy_1level.csv').then(function(data) {
 
