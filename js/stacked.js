@@ -13,22 +13,27 @@ METHOD: select the d3 div and set the width and height
 ------------------------------
 */
 
-// append the svg object to the body of the page
-let svg = d3.select("#svganchor")
-  .append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-  .attr("transform",
-        "translate(" + margin.left + "," + margin.top + ")");
-
 /*
 ------------------------------
 METHOD: load in and process data
 ------------------------------
 */
 // Read data
+
 d3.csv('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_hierarchy_1level.csv').then(function(data) {
+  
+let listOfClasses = ['Chicken', 'Turkey', 'GroundBeef', 'Pork', 'Duck', 'Lamb']
+
+
+  for (var i = 0; i <= listOfClasses.length - 1; ++i) {
+  let currentSVG = d3
+      .select("#svg" + listOfClasses[i])
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
 
   // stratify the data: reformatting for d3.js
   const root = d3.stratify()
@@ -45,7 +50,7 @@ d3.csv('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/da
     (root)
 
   // use this information to add rectangles:
-  svg
+  currentSVG
     .selectAll("rect")
     .data(root.leaves())
     .join("rect")
@@ -57,7 +62,7 @@ d3.csv('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/da
       .style("fill", "#69b3a2");
 
   // and to add the text labels
-  svg
+  currentSVG
     .selectAll("text")
     .data(root.leaves())
     .join("text")
@@ -66,6 +71,6 @@ d3.csv('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/da
       .text(function(d){ return d.data.name})
       .attr("font-size", "15px")
       .attr("fill", "white")
-}).catch(function (error) {
+}}).catch(function (error) {
     if (error) throw error;
 });

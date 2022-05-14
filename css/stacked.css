@@ -56,7 +56,14 @@ div.tooltip {
   font: 10px sans-serif;
 }
 
+section {
+  position: relative;
+}
 
+section > div {
+  position: absolute;
+  top: 0;
+}
 /*
 ------------------------------
 this is the combined css. import all the files and set some higher level settings
@@ -76,3 +83,38 @@ body p {
   font-size: 14px;
 }
 
+.key {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .key {
+    width: 100%;
+  }
+}
+
+.key_block {
+  display: flex;
+}
+
+.key_block span {
+  display: none;
+}
+
+.visibleText {
+  display: inline !important;
+}
+
+.key_break {
+  height: 20px;
+  width: 40px;
+  margin: 2px 2px;
+}
+/*# sourceMappingURL=main.css.map */
+
+path {
+  fill:   #c4c4c4;
+  transition: fill 0.2s ease-out;
+}
